@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Try to create a <a href="/profile/create">blog post</a>
                 </div>
             </div>
         </div>

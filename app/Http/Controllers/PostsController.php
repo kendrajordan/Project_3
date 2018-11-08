@@ -10,7 +10,7 @@ class PostsController extends Controller
     //
     public function index()
     {
-      $posts =Blog_post::all();
+      $posts =Blog_post::orderBy('updated_at', 'desc')->get();
       return view('welcome',compact('posts'));
     }
     public function create()
@@ -19,6 +19,7 @@ class PostsController extends Controller
     }
     public function store()
     {
+
       $post = new Blog_post();
       $post->title = request('title');
       $post->link = request('link');
@@ -27,9 +28,20 @@ class PostsController extends Controller
       $post->save();
       return redirect('/');
     }
-    public function edit()
+    /*@param \Illuminate\Http\Request $request
+    @param \App\Blog_post $posts
+    @return \Illuminate\Http\Response
+    public function update(Request $request, Blog_post $post)
     {
-      return view('profile.edit');
+      $postUpdate = Blog_post::where('id'.$post->update)->update([
+        'title'->$request->Input('title'),
+        'text'->$request->Input('text'),
+        'link'->$request->Input('link')
+      ]);
+      if($postUpdate){
+        return redirect()->route('profile.show',['post'->$post->id])with('success','Blog post updated successfully');
+      }
+      return back()-withInput();
     }
-
+    */
 }

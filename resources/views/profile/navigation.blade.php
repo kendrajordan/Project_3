@@ -6,18 +6,20 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li>
-      <div class="flex-center position-ref full-height">
+      <div class="full-height">
           @if (Route::has('login'))
               <div class="top-right links">
                   @auth
                       <a href="{{ url('/home') }}">Home</a>
+                      <div>
+                      <a href="{{ url('/logout') }}"> logout </a>
+                    </div>
                   @else
                       <a href="{{ route('login') }}">Login</a>
 
                       @if (Route::has('register'))
                           <a href="{{ route('register') }}">Register</a>
                       @endif
-
 
                   @endauth
               </div>

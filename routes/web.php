@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/','PostsController@index')->middleware('auth');
 Route::post('/','PostsController@store')->middleware('auth');
-Route::get('/profile/edit','PostsController@edit')->middleware('auth');
+Route::get('/profile/update','PostsController@update')->middleware('auth');
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/profile/create','PostsController@create')->middleware('auth');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

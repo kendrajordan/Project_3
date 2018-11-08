@@ -11,7 +11,6 @@ class PostsController extends Controller
     public function index()
     {
       $posts =Blog_post::all();
-      $id =\App\User::find()
       return view('welcome',compact('posts'));
     }
     public function create()
@@ -24,8 +23,13 @@ class PostsController extends Controller
       $post->title = request('title');
       $post->link = request('link');
       $post->text = request('text');
+      $post->user_id = \Auth::id();
       $post->save();
       return redirect('/');
+    }
+    public function edit()
+    {
+      return view('profile.edit');
     }
 
 }

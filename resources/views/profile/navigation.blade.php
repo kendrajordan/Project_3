@@ -17,10 +17,13 @@
                       @if (Route::has('register'))
                           <a href="{{ route('register') }}">Register</a>
                       @endif
+
+
                   @endauth
               </div>
           @endif
         </li>
+
       <li class="nav-item">
         <a class="nav-link" href="/">Group posts</a>
       </li>

@@ -9,7 +9,7 @@
       </div>
       <div class="form-group">
         <label for="Link">Add a Link</label>
-        <input type="url" class="form-control" id="exampleofaurl" placeholder="https://...">
+        <input type="url" class="form-control" name='link' id="exampleofaurl" placeholder="https://...">
       </div>
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Write some text</label>

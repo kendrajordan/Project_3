@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/','PostsController@index')->middleware('auth');
-Route::post('/','PostsController@store')->middleware('auth');
+Route::post('/profile/update','PostsController@store')->middleware('auth');
 Route::put('/{post}','PostsController@update')->middleware('auth');
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/profile/create','PostsController@create')->middleware('auth');

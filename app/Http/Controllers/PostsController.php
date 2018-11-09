@@ -36,6 +36,6 @@ class PostsController extends Controller
 
     public function update()
     {
-      
+      return view('profile.update');
     }
 }

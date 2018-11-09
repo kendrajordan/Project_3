@@ -64,6 +64,8 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+                                      <a class="dropdown-item" href="/">Group posts</a>
+                                        <a class="dropdown-item" href="/profile/create">Submit a post</a>
                                 </div>
                             </li>
                         @endguest

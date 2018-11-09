@@ -34,18 +34,5 @@ class PostsController extends Controller
       return redirect('/');
     }
 
-    public function update(Blog_post $post)
-    {
-      $postUpdate = Blog_post::where('id'.$post->update)->update([
-        $post->title = request('title');
-        $post->link = request('link');
-        $post->text = request('text');
-        $post->user_id = \Auth::id();
 
-      ]);
-
-      $post->save();
-      return redirect('/');
-    }
-*/
 }

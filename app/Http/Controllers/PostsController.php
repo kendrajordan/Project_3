@@ -33,7 +33,10 @@ class PostsController extends Controller
     $post->delete();
       return redirect('/');
     }
-
+public function edit()
+{
+  return view('profile.edit');
+}
   /*
     public function edit(Request $request, $id)
     {

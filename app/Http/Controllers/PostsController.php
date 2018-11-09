@@ -44,6 +44,6 @@ class PostsController extends Controller
       Blog_post::update('update post set link = ? where id = ?,[$link,$id]');
       Blog_post::update('update post set text = ? where id = ?,[$text,$id]');
       echo "Record updated successfully.<br/>";
-      echo '<a href = "/">Click Here</a> to go back.';*/
-    }
+      echo '<a href = "/">Click Here</a> to go back.';
+    }*/
 }

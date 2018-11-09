@@ -16,7 +16,7 @@
                 <form action='{{url('/',$post->id)}}' method='POST' class="row justify-content-between container">
                   {{ csrf_field() }}
                   {{ method_field('PUT') }}
-                  <button type="submit"class="btn btn-danger">Update</button>
+                  <button type="submit"class="btn btn-success">Update</button>
                 </form>
                 <form action='{{url('/',$post->id)}}' method='POST' class="row justify-content-between container">
                   {{ csrf_field() }}

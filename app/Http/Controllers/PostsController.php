@@ -34,5 +34,8 @@ class PostsController extends Controller
       return redirect('/');
     }
 
-
+    public function update()
+    {
+      return view('profile.update');
+    }
 }

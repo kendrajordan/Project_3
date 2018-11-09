@@ -23,3 +23,4 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/profile/create','PostsController@create')->middleware('auth');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->middleware('auth');
 Route::delete('/{post}','PostsController@delete')->middleware('auth');
+Route::get('/{post}/edit','PostsController@edit')

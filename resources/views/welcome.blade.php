@@ -13,8 +13,7 @@
                 <a href="{{$post->link}}">Link</a>
                 <p class="card-text">{{$post->text}}</p>
                 <p class="card-text">Posted by {{$post->user->name}}</p>
-              
-
+                <a href="{{route('profile.edit',['posts'=>$post->id])}}" class="button btn-default">Edit</a>
                 <form action='{{url('/',$post->id)}}' method='POST' class="row justify-content-between container">
                   {{ csrf_field() }}
                   {{ method_field('DELETE') }}

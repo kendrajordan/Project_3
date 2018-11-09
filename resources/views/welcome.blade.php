@@ -13,7 +13,7 @@
                 <a href="{{$post->link}}">Link</a>
                 <p class="card-text">{{$post->text}}</p>
                 <p class="card-text">Posted by {{$post->user->name}}</p>
-                  <form action="/profile/update">
+                  <form action="{{url('/profile/update)}}">
                   <button type="submit"class="btn btn-success">Update</button>
                  </form>
                 <form action='{{url('/',$post->id)}}' method='POST' class="row justify-content-between container">

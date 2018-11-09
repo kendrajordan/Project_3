@@ -28,6 +28,11 @@ class PostsController extends Controller
       $post->save();
       return redirect('/');
     }
+    public function delete(Blog_post $post)
+    {
+    $post->delete();
+      return redirect('/');
+    }
     /*@param \Illuminate\Http\Request $request
     @param \App\Blog_post $post
     @return \Illuminate\Http\Response

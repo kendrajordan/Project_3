@@ -13,10 +13,11 @@
                 <a href="{{$post->link}}">Link</a>
                 <p class="card-text">{{$post->text}}</p>
                 <p class="card-text">Posted by {{$post->user->name}}</p>
-                <div class="row justify-content-between container">
-                  <button type="button" class="btn btn-success">Edit</button>
-                  <button type="button" class="btn btn-danger">Delete</button>
-                </div>
+                <form action='{{url('post/'.$post->id)}}' method='POST' class="row justify-content-between container">
+                  {{ csrf_field() }}
+              {{ method_field('DELETE') }}
+                  <button type="button" class="btn btn-danger"><a href='{{Route::/profile/{id}}}'>Delete</button>
+                </form>
                 <div class="card-footer">
                   <small class="text-muted">Last updated {{$post->updated_at}}</small>
                 </div>

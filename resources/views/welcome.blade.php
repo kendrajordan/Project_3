@@ -13,9 +13,8 @@
                 <a href="{{$post->link}}">Link</a>
                 <p class="card-text">{{$post->text}}</p>
                 <p class="card-text">Posted by {{$post->user->name}}</p>
-                  <form action="{{url('/profile/update',{post})}}">
                   <a href=type="submit"class="btn btn-success">Update</a>
-                 </form>
+                 ]
                 <form action='{{url('/',$post->id)}}' method='POST' class="row justify-content-between container">
                   {{ csrf_field() }}
                   {{ method_field('DELETE') }}

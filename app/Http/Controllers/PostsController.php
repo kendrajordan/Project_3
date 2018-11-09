@@ -34,17 +34,18 @@ class PostsController extends Controller
       return redirect('/');
     }
 
-    public function update(Request $request, Blog_post $post)
+    public function update(Blog_post $post)
     {
       $postUpdate = Blog_post::where('id'.$post->update)->update([
-        'title'->$request->Input('title'),
-        'text'->$request->Input('text'),
-        'link'->$request->Input('link')
+        $post->title = request('title');
+        $post->link = request('link');
+        $post->text = request('text');
+        $post->user_id = \Auth::id();
+
       ]);
-      if($postUpdate){
-        return redirect()->route('profile.show',['post'->$post->id])with('success','Blog post updated successfully');
-      }
-      return back()-withInput();
+
+      $post->save();
+      return redirect('/');
     }
 */
 }

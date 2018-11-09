@@ -1,6 +1,6 @@
-@extends('profile.layout')
+@extends('layouts.app')
 @section('content')
-<div class='container'>
+<div class='container navbar-dark text-white-50'>
     <form action="/" method="POST">
       {{csrf_field()}}
       <div class="form-group">

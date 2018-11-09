@@ -33,9 +33,20 @@ class PostsController extends Controller
     $post->delete();
       return redirect('/');
     }
-
-    public function update()
+    public function edit()
     {
-      return view('profile.update');
+    return view('profile.edit');
+    }
+  /*
+    public function edit(Request $request, $id)
+    {
+   $title = $request->input('title');
+      $link = $request->input('link');
+      $$text =$request->input('text');
+      Blog_post::update('update post set title = ? where id = ?,[$title,$id]');
+      Blog_post::update('update post set link = ? where id = ?,[$link,$id]');
+      Blog_post::update('update post set text = ? where id = ?,[$text,$id]');
+      echo "Record updated successfully.<br/>";
+      echo '<a href = "/">Click Here</a> to go back.';*/
     }
 }

@@ -3,7 +3,7 @@
 
 @section('content')
 
-            <h1 class='text-center'>Group Posts</h1>
+            <h1 class='text-center text-white-50'>Group Posts</h1>
 
             @foreach ($posts as $post)
             <div class='card mb-3 mt-3 pr-0 pl-0 container bg-dark text-white-50'>

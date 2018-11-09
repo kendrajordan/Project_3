@@ -33,9 +33,7 @@ class PostsController extends Controller
     $post->delete();
       return redirect('/');
     }
-    /*@param \Illuminate\Http\Request $request
-    @param \App\Blog_post $post
-    @return \Illuminate\Http\Response
+
     public function update(Request $request, Blog_post $post)
     {
       $postUpdate = Blog_post::where('id'.$post->update)->update([

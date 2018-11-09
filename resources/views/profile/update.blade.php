@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class='container navbar-dark bg-dark text-white-50'>
-    <form action="/" method="POST">
+    <form action="/" method="PUT">
       {{csrf_field()}}
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Update title</label>

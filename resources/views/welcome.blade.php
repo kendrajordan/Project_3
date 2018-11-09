@@ -16,7 +16,7 @@
                 <form action='{{url('/'.$post->id)}}' method='POST' class="row justify-content-between container">
                   {{ csrf_field() }}
                   {{ method_field('DELETE') }}
-                  <button type="submit"class="btn btn-danger"><a href='{{Route::/profile/{id}}}'>Delete</button>
+                  <button type="submit"class="btn btn-danger">Delete</button>
                 </form>
                 <div class="card-footer">
                   <small class="text-muted">Last updated {{$post->updated_at}}</small>

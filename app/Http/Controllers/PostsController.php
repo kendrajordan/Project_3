@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Blog_post;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class PostsController extends Controller
 {
@@ -33,20 +34,25 @@ class PostsController extends Controller
     $post->delete();
       return redirect('/');
     }
-public function edit()
-{
-  return view('profile.edit');
-}
-  /*
-    public function edit(Request $request, $id)
+  //  @param  int  $id
+    //@return \Illuminate\Http\Response
+
+    public function edit($id)
     {
-   $title = $request->input('title');
-      $link = $request->input('link');
-      $$text =$request->input('text');
-      Blog_post::update('update post set title = ? where id = ?,[$title,$id]');
-      Blog_post::update('update post set link = ? where id = ?,[$link,$id]');
-      Blog_post::update('update post set text = ? where id = ?,[$text,$id]');
-      echo "Record updated successfully.<br/>";
-      echo '<a href = "/">Click Here</a> to go back.';
-    }*/
+      $post=\App\Blog_post::find($id);
+      return view('profile.edit',compact('post'));
+    }
+    //@param  \Illuminate\Http\Request  $request
+    //@param  int  $id
+    //return \Illuminate\Http\Response
+    public function update(Request $request, $id)
+    {
+      $post =\App\Blog_post::find($id);
+      $post->title =$request->input('title');
+      $post->link=$request->input('link');
+      $post->text =$request->input('text');
+      $post->save();
+      return redirect('/');
+
+    }
 }

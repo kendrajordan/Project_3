@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    Try to create a <a href="/profile/create">blog post</a>
+                    <p>See what others have posted: <a href="/">Group Posts</a></p>
+                    <p>Try to create a <a href="/profile/create">blog post</a></p>
                 </div>
             </div>
         </div>

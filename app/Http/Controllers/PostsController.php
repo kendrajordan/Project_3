@@ -51,6 +51,7 @@ class PostsController extends Controller
       $post->title =$request->input('title');
       $post->link=$request->input('link');
       $post->text =$request->input('text');
+      $post->user_id = \Auth::id();
       $post->save();
       return redirect('/');
 

@@ -19,7 +19,7 @@ class CreateBlogPostsTable extends Migration
           $table->foreign('user_id')->references('id')->on('users');
           $table->string('title');
           $table->longText('text');
-          $table->mediumText('link');
+          $table->mediumText('link')->nullable();
           $table->timestamps();
         });
     }

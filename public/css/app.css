@@ -10473,12 +10473,11 @@ a.text-dark:focus {
 }
 
 body {
-  background-image: url(http://vignette3.wikia.nocookie.net/steven-universe/images/5/5f/Same_Old_World_101.png/revision/latest?cb=20160617181335);
-  height: 100%;
+  background: url("https://wallpaper-gallery.net/images/steven-universe-desktop-background/steven-universe-desktop-background-10.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
-a,
-a:hover {
+a {
   color: white;
   text-decoration: none;
 }

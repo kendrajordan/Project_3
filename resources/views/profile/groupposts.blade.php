@@ -1,4 +1,4 @@
-@extends('profile.layout')
+sebf@extends('profile.layout')
 
 @section('content')
 <h1>Group Posts</h1>
